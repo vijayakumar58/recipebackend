@@ -10,10 +10,7 @@ const URL = process.env.DB
 const app = express();
 
 app.use(express.json());
-app.use(cors({
-    // origin:"http://localhost:3001"
-    origin: "recipevijayapp.netlify.app"
-}));
+app.use(cors());
 
 app.use("/auth", userRouter);
 app.use("/recipes", recipesRouter);
